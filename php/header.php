@@ -8,15 +8,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8770348bdd.js" crossorigin="anonymous"></script>
     <title>Q Commerce</title>
-</Head>
+</head>
 
-<Header>
-    <div>
+<header>
+    <div class="q_commerce_brand">
+
         <embed src="assets/q_commerce_logo.svg"  class="q_commerce_logo"></embed>
-        <div>
-            <h1>Commerce</h1>
-        </div>
+
+        <h1>Commerce</h1>
+
     </div>
-    <?php include ('php\main_nav.php'); ?>
-</Header>
+    <?php include ('php/main_nav.php'); ?>
+</header>

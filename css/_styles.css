@@ -1,12 +1,21 @@
+#body {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background-color: green;
+}
+
 .q_commerce_logo {
   display: flex;
-  width: 20px;
-  height: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: lightblue;
 }
 
 .main_nav {
   display: flex;
   height: 50%;
+  width: 40%;
 }
 
 /*# sourceMappingURL=_styles.css.map */

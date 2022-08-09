@@ -1,6 +1,6 @@
 <?php
-    include ('php\header.php');
+    include ('php/header.php');
 ?>
-<body>
+<body id="body">
     
 </body>
