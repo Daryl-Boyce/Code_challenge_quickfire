@@ -1,9 +1,9 @@
 <!-- Main Navigation -->
-<nav class="main_nav">
+<nav id="main_nav">
 
-<embed src="assets/burger_menu.svg"  class="burger_menu"></embed>
+<embed src="assets/burger_menu.svg"  id="burger_menu"></embed>
 
-<ul>
+<!-- <ul>
     <li>Menu Item
         <ul>
             <li>Sub Menu Item</li>
@@ -33,5 +33,5 @@
     <li>Menu Item
 
     </li>
-</ul>
+</ul> -->
 </nav>

@@ -1,15 +1,18 @@
 
-.main_nav{
+#main_nav{
     display: flex;
-    height: 50%;
-    width: 40%;
-    background-color: pink;
+    height: 10%;
+    width: 30%;
+    background-color: #f3f3f3;
+    margin-top: 20px;
+    
 }
 
-.burger_menu{
+#burger_menu{
     display: flex;
-    height: 50%;
-    width: 50%;
-    
+    height: 10%;
+    width: 40%;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 

@@ -1,6 +1,9 @@
-#body{
+body{
     display: flex;
     height: 100%;
     width: 100%;
-    background-color: green;
+    background-color: #FAFAFA;
+    margin: 0px;
+    flex-direction: column;
+    align-items: center;
 }
