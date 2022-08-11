@@ -5,5 +5,16 @@ body{
     background-color: #FAFAFA;
     margin: 0px;
     flex-direction: column;
-    align-items: center;
+    align-items: center
+}
+
+#product_header{
+    display: flex;
+    height: 50%;
+    font-family: 'Roboto', serif;
+    font-size: 30px;
+    margin-top: 40px;
+    font-weight: 200;
+    text-transform: capitalize;
+    color: #353532;
 }

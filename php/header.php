@@ -17,7 +17,7 @@
 
         <embed src="assets/q_commerce_logo.svg"  class="q_commerce_logo"></embed>
 
-        <h1>Commerce</h1>
+        <h1>commerce</h1>
 
     </div>
     <?php include ('php/main_nav.php'); ?>

@@ -2,7 +2,7 @@ header{
     display: flex;
     width: 100%;
     height: 100%;
-    background-color: #f3f3f3;
+    background-color: #62929E;
     padding-bottom: 20px;
 }
 
@@ -21,8 +21,9 @@ header{
         font-family: 'Roboto', serif;
         font-size: 40px;
         margin-top: 10px;
-        font-weight: 200;
-        
+        font-weight: 600;
+        text-transform: capitalize;
+        color: #353532;
     }
 }
 // 
@@ -30,5 +31,6 @@ header{
     display:flex;
     width: 20%;
     height: 20%;
-    background-color: #f3f3f3;
+    background-color: none;
+    filter: invert(17%) sepia(11%) saturate(222%) hue-rotate(21deg) brightness(96%) contrast(88%);
 }
