@@ -7,5 +7,10 @@
 // 
 @use "partials/main_nav.scss";
 //
-@use "partials/slider.scss"
+// Product main slider //
+@use "partials/slider.scss";
 // 
+// footer of the page //
+@use "partials/footer.scss" ;
+// 
+@use "partials/email_banner.scss";

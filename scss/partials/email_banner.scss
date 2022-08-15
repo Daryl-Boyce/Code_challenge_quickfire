@@ -1,0 +1,38 @@
+.email_banner{
+    display: flex;
+    width: 100%;
+    background: #252627;
+    font-family: roboto, sans-serif;
+    font-weight: 200;
+    color: #F2EFE9;
+    text-transform: capitalize;
+    justify-content: center;
+    padding-bottom: 8%;
+}
+
+.email_banner__inner{
+    display: inherit;
+    width: 100%;
+}
+
+.email_banner_form{
+    display: flex;
+}
+
+#sign_up{
+    width: 67%;
+    text-transform: capitalize;
+    font-family: roboto, sans-serif;
+    font-weight: 100;
+    border-radius: 4%;
+    border: 1px solid #F2EFE9;
+}
+
+.email_banner_button {
+    width: 25%;
+    background-color: #252627;
+    color: #F2EFE9;
+    border: 0.5px solid #F2EFE9;
+    border-radius: 10%;
+    margin-left: 10px;
+}

@@ -12,18 +12,28 @@ body {
   display: flex;
   height: 50%;
   font-family: "Roboto", serif;
-  font-size: 30px;
-  margin-top: 40px;
-  font-weight: 200;
+  font-size: 25px;
+  font-weight: 100;
   text-transform: capitalize;
-  color: #353532;
+  color: #564E58;
+  padding-right: 40px;
+  margin: 0px;
+}
+
+.name_favorite_wrapper {
+  display: flex;
+}
+
+.heart {
+  font-size: 25px;
+  color: #904E55;
+  padding-right: 70px;
 }
 
 header {
   display: flex;
   width: 100%;
   height: 100%;
-  background-color: #62929E;
   padding-bottom: 20px;
 }
 
@@ -52,24 +62,165 @@ header {
   filter: invert(17%) sepia(11%) saturate(222%) hue-rotate(21deg) brightness(96%) contrast(88%);
 }
 
-#main_nav {
-  display: flex;
-  height: 10%;
-  width: 30%;
-  background-color: #62929E;
-  margin-top: 20px;
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #564E58;
+  overflow: hidden;
+  width: 100%;
+  z-index: 4;
+  text-transform: capitalize;
 }
 
-#burger_menu {
-  display: flex;
-  height: 20%;
-  width: 50%;
-  margin-top: 10px;
-  margin-left: 10px;
-  filter: invert(17%) sepia(11%) saturate(222%) hue-rotate(21deg) brightness(96%) contrast(88%);
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #904E55;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
 
-/* Slideshow container */
+/* Add an active class to highlight the current page */
+.nav_logo {
+  background-color: #564E58;
+  color: white;
+  width: 8%;
+  height: 61%;
+}
+.nav_logo img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+  height: 9%;
+}
+
+/* Dropdown container - needed to position the dropdown content */
+.dropdown {
+  float: left;
+  overflow: hidden;
+  text-transform: capitalize;
+}
+
+/* Style the dropdown button to fit inside the topnav */
+.dropdown .dropbtn {
+  font-size: 17px;
+  border: none;
+  outline: none;
+  color: #904E55;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #252627;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Style the links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: F2EFE9;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a dark background on topnav links and the dropdown button on hover */
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #564E58;
+  color: #F2EFE9;
+}
+
+/* Add a grey background to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: #564E58;
+}
+
+/* Show the dropdown menu when the user moves the mouse over the dropdown button */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+@media screen and (max-width: 600px) {
+  .topnav.responsive {
+    position: relative;
+  }
+
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .topnav.responsive .dropdown {
+    float: none;
+  }
+
+  .topnav.responsive .dropdown-content {
+    position: relative;
+  }
+
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+.menuitem {
+  font-size: 17px;
+  border: none;
+  outline: none;
+  color: #904E55;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+@media screen and (max-width: 700px) {
+  .dropdown .dropbtn {
+    padding-top: 20px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .dropdown .dropbtn .menuitem {
+    margin-top: 40px;
+    margin-left: 100px;
+  }
+}
 .slideshow-container {
   display: flex;
   max-width: 100%;
@@ -79,44 +230,38 @@ header {
   align-items: center;
 }
 
-/* Hide the images by default */
 .mySlides {
   display: none;
 }
 
-/* Next & previous buttons */
 .prev {
-  cursor: pointer;
-  position: absolute;
-  top: 40%;
-  width: auto;
-  right: 83%;
-  margin-top: -22px;
-  padding: 25px 1px 1px 1px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0px;
-  left: 80%;
+  height: 70px;
+  width: 22%;
   border-radius: 3px 0 0 3px;
   cursor: pointer;
-  position: absolute;
-  top: 40%;
-  width: auto;
-  margin-top: -22px;
-  padding: 25px;
+  padding: 20px 25px 25px 0px;
   color: white;
-  font-weight: bold;
-  font-size: 18px;
   transition: 0.6s ease;
   user-select: none;
+  opacity: 50%;
+}
+.prev img {
+  width: 100%;
+}
+
+.next {
+  height: 70px;
+  width: 20%;
+  border-radius: 3px 0 0 3px;
+  cursor: pointer;
+  padding: 25px 0px 25px 20px;
+  color: white;
+  transition: 0.6s ease;
+  user-select: none;
+  opacity: 50%;
+}
+.next img {
+  width: 100%;
 }
 
 .next:hover {
@@ -127,24 +272,15 @@ header {
   opacity: 100%;
 }
 
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
+.slider_buttons {
+  display: flex;
   width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
+  height: 20%;
+  z-index: 5;
+  flex-direction: row;
+  justify-content: space-between;
   position: absolute;
-  top: 0;
+  top: 30%;
 }
 
 .slide_under {
@@ -152,12 +288,11 @@ header {
   justify-content: center;
 }
 
-/* The dots/bullets/indicators */
 .slide_under_preview {
   cursor: pointer;
-  height: 55px;
-  width: 55px;
-  margin: 15px 0px 0px 40px;
+  height: inherit;
+  width: 20%;
+  margin: 15px 0px 0px 10px;
   background-color: none;
   border-radius: 20%;
   display: inline-block;
@@ -185,9 +320,9 @@ header {
 }
 #countdown_timer {
   display: flex;
-  width: 100%;
+  width: 17%;
   position: absolute;
-  left: 39%;
+  left: 37%;
   bottom: 0.1%;
   top: -10%;
   font-size: 18px;
@@ -196,12 +331,12 @@ header {
 }
 
 .countdown_text_left {
-  color: #5e5e5e;
-  width: 36%;
+  color: #564E58;
+  width: 46%;
   position: absolute;
-  font-size: 16px;
-  top: 30%;
-  left: 3%;
+  font-size: 14px;
+  top: 31%;
+  right: 53.5%;
   z-index: 3;
   text-transform: uppercase;
   font-family: roboto, sans-serif;
@@ -209,12 +344,12 @@ header {
 }
 
 .countdown_text_right {
-  color: #5e5e5e;
-  width: 47%;
+  color: #564E58;
+  width: 45%;
   position: absolute;
-  font-size: 16px;
+  font-size: 14px;
   left: 56%;
-  top: 30%;
+  top: 31%;
   z-index: 3;
   text-transform: uppercase;
   font-family: roboto, sans-serif;
@@ -229,6 +364,68 @@ header {
   opacity: 70%;
   z-index: 1;
   border-radius: 3% 3% 0% 0%;
+}
+
+@media screen and (min-width: 465px) {
+  .slideshow-container {
+    margin-right: 20px;
+    max-width: 47%;
+  }
+}
+@media screen and (min-width: 465px) {
+  .prev .next {
+    width: 14%;
+  }
+}
+@media screen and (min-width: 460px) {
+  .countdown_text_right .countdown_text_left {
+    width: 10%;
+    font-size: 10px;
+  }
+}
+.footer_logo {
+  display: flex;
+  width: 20%;
+  height: 100%;
+}
+
+.email_banner {
+  display: flex;
+  width: 100%;
+  background: #252627;
+  font-family: roboto, sans-serif;
+  font-weight: 200;
+  color: #F2EFE9;
+  text-transform: capitalize;
+  justify-content: center;
+  padding-bottom: 8%;
+}
+
+.email_banner__inner {
+  display: inherit;
+  width: 100%;
+}
+
+.email_banner_form {
+  display: flex;
+}
+
+#sign_up {
+  width: 67%;
+  text-transform: capitalize;
+  font-family: roboto, sans-serif;
+  font-weight: 100;
+  border-radius: 4%;
+  border: 1px solid #F2EFE9;
+}
+
+.email_banner_button {
+  width: 25%;
+  background-color: #252627;
+  color: #F2EFE9;
+  border: 0.5px solid #F2EFE9;
+  border-radius: 10%;
+  margin-left: 10px;
 }
 
 /*# sourceMappingURL=_styles.css.map */

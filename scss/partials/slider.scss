@@ -1,4 +1,4 @@
-/* Slideshow container */
+//  Container for the slideshow
     .slideshow-container {
         display: flex;
         max-width: 100%;
@@ -8,46 +8,48 @@
         align-items: center;
     }
   
-  /* Hide the images by default */
+  //default to hide slides on start
     .mySlides {
         display: none;
     }
   
-  /* Next & previous buttons */
+  //Previous button on the slider
     .prev, {
-        cursor: pointer;
-        position: absolute;
-        top: 40%;
-        width: auto;
-        right: 83%;
-        margin-top: -22px;
-        padding: 25px 1px 1px 1px;
-        color: white;
-        font-weight: bold;
-        font-size: 18px;
-        transition: 0.6s ease;
-        border-radius: 0 3px 3px 0;
-        user-select: none;
-        // opacity: 10%;
+      height: 70px;
+      width: 22%;
+      border-radius: 3px 0 0 3px;
+      cursor: pointer;
+      
+      padding: 20px 25px 25px 0px;
+      color: white;
+      transition: 0.6s ease;
+      user-select: none;
+      opacity: 50%;
+
+      img{
+        width:100%;
+      }
     }
   
-  /* Position the "next button" to the right */
+    // Next button on the slider
     .next {
-        right: 0px;
-        left: 80%;
-        border-radius: 3px 0 0 3px;
-        cursor: pointer;
-        position: absolute;
-        top: 40%;
-        width: auto;
-        margin-top: -22px;
-        padding: 25px;
-        color: white;
-        font-weight: bold;
-        font-size: 18px;
-        transition: 0.6s ease;
-        user-select: none;
-        // opacity: 10%;
+      height: 70px;
+      width: 20%;
+      // right: 0px;
+      // left: 70%;
+      border-radius: 3px 0 0 3px;
+      cursor: pointer;
+      padding: 25px 0px 25px 20px;
+      color: white;
+      transition: 0.6s ease;
+      user-select: none;
+      opacity: 50%;
+
+      img{
+        width:100%;
+      }
+      
+    
     }
     .next:hover{
         opacity: 100%;
@@ -57,26 +59,20 @@
         opacity: 100%;
     }
   
-  /* Caption text */
-    .text {
-        color: #f2f2f2;
-        font-size: 15px;
-        padding: 8px 12px;
-        position: absolute;
-        bottom: 8px;
-        width: 100%;
-        text-align: center;
-  }
   
-  /* Number text (1/3 etc) */
-    .numbertext {
-        color: #f2f2f2;
-        font-size: 12px;
-        padding: 8px 12px;
-        position: absolute;
-        top: 0;
+    .slider_buttons{
+      display: flex;
+      width: 100%;
+      height: 20%;
+      z-index: 5;
+      flex-direction: row;
+      justify-content: space-between;
+      position: absolute;
+      top: 30%;
     }
-  
+
+
+
 
     .slide_under{
         display: flex;
@@ -84,12 +80,12 @@
     }
 
 
-  /* The dots/bullets/indicators */
+  // Image preview underneath the main image(no decent res images so main is repeated) 
     .slide_under_preview {
         cursor: pointer;
-        height: 55px;
-        width: 55px;
-        margin: 15px 0px 0px 40px;
+        height: inherit;
+        width: 20%;
+        margin: 15px 0px 0px 10px;
         background-color: none;
         border-radius: 20%;
         display: inline-block;
@@ -114,9 +110,9 @@
 
     #countdown_timer{
         display: flex;
-        width: 100%;
+        width: 17%;
         position: absolute;
-        left: 39%;
+        left: 37%;
         bottom: 0.1%;
         top: -10%;
         font-size:18px;
@@ -125,31 +121,33 @@
   }
 
   .countdown_text_left{
-    color: #5e5e5e;
-    width: 36%;
+    color: #564E58;
+    width: 46%;
     position: absolute;
-    font-size: 16px;
-    top: 30%;
-    left: 3%;
+    font-size: 14px;
+    top: 31%;
+    right: 53.5%;
     z-index: 3;
     text-transform: uppercase;
     font-family: roboto, sans-serif;
     font-weight: 400;
   }
 
+  
   .countdown_text_right{
-    color: #5e5e5e;
-    width: 47%;
+    color: #564E58;
+    width: 45%;
     position: absolute;
-    font-size: 16px;
+    font-size: 14px;
     left: 56%;
-    top: 30%;
+    top: 31%;
     z-index: 3;
     text-transform: uppercase;
     font-family: roboto, sans-serif;
     font-weight: 400;
   }
 
+  // Wrapper to caintain the countdown and its text
   .timer_wrapper{
     position: absolute;
     width: 100%;
@@ -158,4 +156,26 @@
     opacity: 70%;
     z-index: 1;
     border-radius: 3% 3% 0% 0%;
+  }
+
+
+
+  @media screen and (min-width: 465px){
+    .slideshow-container {
+      margin-right: 20px;
+      max-width: 47%
+    }
+  }
+
+  @media screen and (min-width: 465px){
+    .prev .next {
+      width: 14%;
+    }
+  }
+
+  @media screen and (min-width: 460px){
+    .countdown_text_right .countdown_text_left {
+      width: 10%;
+      font-size: 10px;
+    }
   }

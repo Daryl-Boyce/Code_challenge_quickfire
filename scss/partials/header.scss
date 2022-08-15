@@ -2,7 +2,7 @@ header{
     display: flex;
     width: 100%;
     height: 100%;
-    background-color: #62929E;
+    
     padding-bottom: 20px;
 }
 
@@ -33,4 +33,10 @@ header{
     height: 20%;
     background-color: none;
     filter: invert(17%) sepia(11%) saturate(222%) hue-rotate(21deg) brightness(96%) contrast(88%);
+}
+
+
+
+@media screen and (max-width: 465px){
+    
 }
